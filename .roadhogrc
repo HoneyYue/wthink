@@ -1,0 +1,80 @@
+{
+  "entry": "src/index.js",
+  "theme": "./theme.config.js",
+  "env": {
+    "development": {
+      "extraBabelPlugins": [
+        "dva-hmr",
+        "transform-runtime",
+        ["import", { "libraryName": "antd", "style": "css" }]
+      ]
+    },
+    "production": {
+      "extraBabelPlugins": [
+        "transform-runtime"
+      ]
+    }
+  },
+  "externals": {
+    "react": "React",
+    "react-dom": "ReactDOM"
+  },
+  "proxy": {
+    "/*/list": {
+      "target": "http://172.10.10.144:90",
+      "changeOrigin": true
+    },
+    "/*/statistics": {
+      "target": "http://172.10.10.144:90",
+      "changeOrigin": true
+    },
+    "/*/*/statistics": {
+      "target": "http://172.10.10.144:90",
+      "changeOrigin": true
+    },
+    "/*/org": {
+      "target": "http://172.10.10.144:90",
+      "changeOrigin": true
+    },
+    "/*/normalrate": {
+      "target": "http://172.10.10.144:90",
+      "changeOrigin": true
+    },
+    "/*/add": {
+      "target": "http://172.10.10.144:90",
+      "changeOrigin": true
+    },
+    "/*/edit": {
+      "target": "http://172.10.10.144:90",
+      "changeOrigin": true
+    },
+    "/*/del": {
+      "target": "http://172.10.10.144:90",
+      "changeOrigin": true
+    },
+    "/*/resetpwd": {
+      "target": "http://172.10.10.144:90",
+      "changeOrigin": true
+    },
+    "/*/query*": {
+      "target": "http://172.10.10.144:90",
+      "changeOrigin": true
+    },
+    "/*/upload*": {
+       "target": "http://172.10.10.144:90",
+       "changeOrigin": true
+    },
+    "/*/switch*": {
+       "target": "http://172.10.10.144:90",
+       "changeOrigin": true
+    },
+    "/*/group*": {
+       "target": "http://172.10.10.144:90",
+       "changeOrigin": true
+    },
+     "/*.xls": {
+        "target": "http://172.10.10.144:90",
+        "changeOrigin": true
+     }
+  }
+}
